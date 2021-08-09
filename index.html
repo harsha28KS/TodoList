@@ -42,10 +42,10 @@
                 <li v-for="(todo,index) in todos">
                     <div class="row">
                         <h4 class="col-8">{{ todo }} </h4>
-                        <div class="col-4">
-                            <button @click="editTodo(index,todo)" class="btn btn-primary">Edit</button>
-                            <button @click="deleteTodo(index)" class="btn btn-danger">del</button>
-                        </div>
+                        
+                            <button @click="editTodo(index,todo)" class="btn btn-primary col-2">Edit</button>
+                            <button @click="deleteTodo(index)" class="btn btn-danger col-2">del</button>
+                        
                     </div>
                 </li>
             </ol>
