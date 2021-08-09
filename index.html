@@ -14,8 +14,16 @@
     <!--Google Font-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
 
-    <!--Icons-->
+    <!--Font Awesome Icons-->
     <script src="https://kit.fontawesome.com/ca0417152b.js" crossorigin="anonymous"></script>
+
+    <style>
+       @media only screen and (max-width: 600px){
+           .add button{width: 35%;}
+           .icons{display: flex;}
+       }
+    </style>
+
 </head> 
 <body>
     <div id="app">
@@ -24,7 +32,7 @@
             <!-- Heading -->
             <h1 class="text-center mt-5 fw-bold">TO-DO LIST</h1>
 
-            <!-- Input -->
+            <!-- Adding a task-->
             <div>
                 <div class="add d-flex mt-5" v-if="!isEditing" >
                     <input class="w-100 form-control" type="text" v-model="todo">
@@ -37,12 +45,12 @@
                 </div>
             </div>
 
+            <!--Displaying task list-->
             <ol  class="mt-5">
-                
                 <li v-for="(todo,index) in todos">
                     <div class="row">
-                        <h4 class="col-10">{{ todo }} </h4>
-                        <div class="col-2">
+                        <h4 class="col-9">{{ todo }} </h4>
+                        <div class="col-3 icons">
                             <i class="fa fa-pen"  @click="editTodo(index,todo)"></i>
                             <i class="fa fa-trash" @click="deleteTodo(index)"></i>
                         </div>
@@ -52,6 +60,7 @@
 
         </div>
     </div>
+    
     <!-- <script src="https://vuejs.org/js/vue.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script>
