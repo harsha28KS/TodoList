@@ -41,7 +41,7 @@
                 
                 <li v-for="(todo,index) in todos">
                     <div class="row">
-                        <h4 class="col-8">{{ todo }} </h4>
+                        <h4 class="col-10">{{ todo }} </h4>
                         <div class="col-2 d-flex">
                             <i class="fa fa-pen"  @click="editTodo(index,todo)"></i>
                             <i class="fa fa-trash" @click="deleteTodo(index)"></i>
